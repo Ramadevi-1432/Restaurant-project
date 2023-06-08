@@ -9,6 +9,12 @@ class About extends React.Component {
   }
    componentDidMount() {
    console.log('parent-componentdidmount')
+   this.timer = setInterval(()=>{
+    console.log('rams')
+   },1000)
+  }
+  componentWillUnmount(){
+    clearInterval(this.timer)
   }
   render() {
     console.log("parent-render");

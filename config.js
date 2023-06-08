@@ -939,4 +939,11 @@ export const restaurantlist = [
       subtype: "basic",
     },
   ];
-  
+  export function filterData(searchText, allRestaurant) {
+    const filterData = allRestaurant.filter((rest) =>
+      rest?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
+    );
+    return filterData;
+  }
+  export const MENU_CDN_URL= "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.45888&lng=78.4290079&restaurantId=";
+  export const RESDATA_CDN_URL= "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4472943&lng=78.4425108&page_type=DESKTOP_WEB_LISTING";
